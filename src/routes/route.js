@@ -4,12 +4,13 @@ const controllerProd=require('../controllers/controller');
 
 
 route.get("/",controllerProd.getAll);
+
 route.get("/:id",controllerProd.getProductById);
 
-// route.put();
+route.put("/:id",controllerProd.updateProduct);
 
-// route.post();
+ route.post("/",controllerProd.addProduct);
 
-// route.delete();
+ route.delete("/:id",controllerProd.deleteProductById);
 
 module.exports=route;
